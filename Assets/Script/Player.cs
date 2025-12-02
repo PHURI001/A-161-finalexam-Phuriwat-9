@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    //add
+    public int Health { get; private set; }
+
+    //default
     public float MoveSpeed { get; private set; }
     private float jumpForce = 10f;
 
@@ -13,6 +17,7 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         IsInvulnerable = false;
+        Health = 100;
     }
 
     private void Update()
@@ -28,7 +33,7 @@ public class Player : MonoBehaviour
 
     public void SetMoveSpeed(float newSpeed)
     {
-        MoveSpeed = newSpeed;
+        MoveSpeed = MoveSpeed * newSpeed;
         Debug.Log($"New Speed Is {MoveSpeed}");
     }
 
@@ -36,5 +41,13 @@ public class Player : MonoBehaviour
     {
         IsInvulnerable = isEnabled;
         Debug.Log($"New IsInvulnerable Is {IsInvulnerable}");
+    }
+
+    //add
+    public void AddHealth(int newHealth)
+    {
+        Debug.Log($"Current Health : {Health}");
+        Health += newHealth;
+        Debug.Log($"After Buff Health : {Health}");
     }
 }
