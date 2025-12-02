@@ -5,8 +5,7 @@ public class Ducky : PowerUpBase
     //for + Player Hp and Make Sound
     public override void ApplyEffect(Player player)
     {
-        player.AddHealth(20);
-        MakeSound();
+        if (!IsEffectActive) { MakeSound(); player.AddHealth(20); IsEffectActive = true; } //set stats and do something
     }
 
     void MakeSound()

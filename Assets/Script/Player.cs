@@ -46,14 +46,15 @@ public class Player : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        PowerUpBase powerUpBase = collision.GetComponent<PowerUpBase>();
+        PowerUpBase powerUpBase = collision.GetComponent<PowerUpBase>();  // find obj
         powerUpBase.ApplyEffect(this);
+        Destroy(collision.gameObject);
     }
 
     /*public void Move() { }
     public void Jump() { }*/
 
-    //add
+    //add Health
     public void AddHealth(int newHealth)
     {
         Debug.Log($"Current Health : {Health}");

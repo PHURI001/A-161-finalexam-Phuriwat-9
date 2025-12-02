@@ -2,7 +2,7 @@ using UnityEngine;
 
 public abstract class PowerUpBase : MonoBehaviour
 {
-    protected bool IsEffectActive;
+    protected bool IsEffectActive = false;
 
     public abstract void ApplyEffect(Player player);
 }
