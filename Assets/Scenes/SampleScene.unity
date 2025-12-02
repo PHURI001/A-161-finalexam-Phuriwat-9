@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 389056591}
   - component: {fileID: 389056590}
   - component: {fileID: 389056592}
+  - component: {fileID: 389056593}
   m_Layer: 0
   m_Name: SpeedBoost
   m_TagString: Untagged
@@ -222,6 +223,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76d870cc8c536264e86f645c46a23af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpeedBoost
+--- !u!58 &389056593
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389056589}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,6 +577,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1995486183}
   - component: {fileID: 1995486182}
+  - component: {fileID: 1995486184}
+  - component: {fileID: 1995486185}
   m_Layer: 0
   m_Name: Ducky
   m_TagString: Untagged
@@ -620,6 +659,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1995486184
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995486181}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
+--- !u!114 &1995486185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995486181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43ad3e854935594495a3855596f8111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ducky
 --- !u!1 &2096444786
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,6 +718,7 @@ GameObject:
   - component: {fileID: 2096444788}
   - component: {fileID: 2096444787}
   - component: {fileID: 2096444789}
+  - component: {fileID: 2096444790}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
@@ -723,6 +811,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f92bffbd5f5b043428934c53c46c2d40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShieldBuff
+--- !u!61 &2096444790
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096444786}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0.21133333}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.28866667}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &2144705030
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,6 +890,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55902b59ce8ba194dbfddb81b8a48286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
+  <Health>k__BackingField: 0
+  <MoveSpeed>k__BackingField: 0
+  <IsInvulnerable>k__BackingField: 0
 --- !u!50 &2144705032
 Rigidbody2D:
   serializedVersion: 5
@@ -841,6 +978,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55902b59ce8ba194dbfddb81b8a48286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
+  <Health>k__BackingField: 0
+  <MoveSpeed>k__BackingField: 0
+  <IsInvulnerable>k__BackingField: 0
 --- !u!212 &2144705035
 SpriteRenderer:
   m_ObjectHideFlags: 0

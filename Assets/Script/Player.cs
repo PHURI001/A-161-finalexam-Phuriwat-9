@@ -3,13 +3,13 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     //add
-    public int Health { get; private set; }
+    [ field : SerializeField ] public int Health { get; private set; }
 
     //default
-    public float MoveSpeed { get; private set; }
+    [field: SerializeField] public float MoveSpeed { get; private set; }
     private float jumpForce = 10f;
 
-    public bool IsInvulnerable { get; private set; }
+    [field: SerializeField] public bool IsInvulnerable { get; private set; }
 
     private Rigidbody2D rb;
 
@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         IsInvulnerable = false;
+        MoveSpeed = 5f;
         Health = 100;
     }
 
@@ -42,6 +43,15 @@ public class Player : MonoBehaviour
         IsInvulnerable = isEnabled;
         Debug.Log($"New IsInvulnerable Is {IsInvulnerable}");
     }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        PowerUpBase powerUpBase = collision.GetComponent<PowerUpBase>();
+        powerUpBase.ApplyEffect(this);
+    }
+
+    /*public void Move() { }
+    public void Jump() { }*/
 
     //add
     public void AddHealth(int newHealth)

@@ -6,6 +6,7 @@ public class Ducky : PowerUpBase
     public override void ApplyEffect(Player player)
     {
         player.AddHealth(20);
+        MakeSound();
     }
 
     void MakeSound()
